@@ -63,7 +63,7 @@
                             <label for="hospital_id" class="form-label ">Rumahsakit</label>
                             <select class="form-select " name="hospital_id">
                                 @foreach ($hospital as $hospit)
-                                @if (old('hospital_id',$item->id) == $hospit->id)
+                                @if (old('hospital_id',$item->hospital->id) == $hospit->id)
                                 <option value="{{ $hospit->id }}" selected>{{ $hospit->name }}</option>
                                 @else
                                 <option value="{{ $hospit->id }}">{{ $hospit->name }}</option>
