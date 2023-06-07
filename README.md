@@ -1,10 +1,10 @@
 # laravel_ilhamputra0601
 
 
-Soal B : Laravel
+# Soal B : Laravel
 
-info:
-#pada bagian config->database.php
+# info:
+# pada bagian config->database.php
     cari bagian connections=>[
          mysql
         =>[
