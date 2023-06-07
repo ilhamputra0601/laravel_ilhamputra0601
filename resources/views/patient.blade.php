@@ -34,7 +34,7 @@
                             <td>{{ $item->hospital->name }}</td>
                             <td>
                                 <a href="#editEmployeeModal{{ $item->id }}" data-id="{{ $item->id }}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                <a href="#" class="delete" data-toggle="modal" data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                <a href="#deleteEmployeeModal" class="delete" data-toggle="modal" data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                             </td>
                         </tr>
                         <!-- Edit Modal HTML -->
@@ -177,7 +177,6 @@
     </div>
 
 </x-app-layout>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script>
     $(document).ready(function() {
