@@ -14,7 +14,6 @@
     text-align: center;
     margin: 20px 0;
 ">halaman CRUD ada di navigasi</h1>
-">ini hamalan dashboard</h1>
   <h1 style="
     color: #ffffff;
     font-size: 25px;
