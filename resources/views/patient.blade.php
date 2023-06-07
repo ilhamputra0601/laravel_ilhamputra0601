@@ -31,7 +31,7 @@
                             <td>{{ $item->name }}</td>
                             <td>{{ $item->address }}</td>
                             <td>{{ $item->phone }}</td>
-                            <td>{{ $item->hospital->name }}</td>
+                            <td>{{ optional($item->hospital)->name }}</td>
                             <td>
                                 <a href="#editEmployeeModal{{ $item->id }}" data-id="{{ $item->id }}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                 <a href="#deleteEmployeeModal" class="delete" data-toggle="modal" data-id="{{ $item->id }}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -63,7 +63,7 @@
                             <label for="hospital_id" class="form-label ">Rumahsakit</label>
                             <select class="form-select " name="hospital_id">
                                 @foreach ($hospital as $hospit)
-                                @if (old('hospital_id',$item->hospital->id) == $hospit->id)
+                                @if (old('hospital_id',optional($item->hospital)->id ) == $hospit->id)
                                 <option value="{{ $hospit->id }}" selected>{{ $hospit->name }}</option>
                                 @else
                                 <option value="{{ $hospit->id }}">{{ $hospit->name }}</option>
