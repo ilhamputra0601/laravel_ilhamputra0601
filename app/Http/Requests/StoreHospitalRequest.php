@@ -25,7 +25,8 @@ class StoreHospitalRequest extends FormRequest
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:hospitals'],
             'address' => ['required'],
-            'phone' => ['required', 'regex:/^\d{10,12}$/','unique:hospitals'],
+            'phone' => ['required','unique:hospitals'],
+            // 'phone' => ['required', 'regex:/^\d{10,12}$/','unique:hospitals'],
         ];
     }
 }

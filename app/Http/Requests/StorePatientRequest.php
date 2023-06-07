@@ -24,7 +24,7 @@ class StorePatientRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'address' => ['required'],
-            'phone' => ['required', 'regex:/^\d{10,12}$/','unique:patients'],
+            'phone' => ['required','unique:patients'],
             'hospital_id' => ['required'],
         ];
     }

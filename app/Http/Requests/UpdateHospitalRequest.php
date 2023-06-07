@@ -27,7 +27,7 @@ class UpdateHospitalRequest extends FormRequest
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', Rule::unique(Hospital::class)->ignore($this->hospital->id)],
             'address' => ['required'],
-            'phone' => ['required', 'regex:/^\d{10,12}$/', Rule::unique(Hospital::class)->ignore($this->hospital->id)],
+            'phone' => ['required', Rule::unique(Hospital::class)->ignore($this->hospital->id)],
         ];
     }
 }

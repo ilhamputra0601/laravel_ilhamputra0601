@@ -26,7 +26,7 @@ class UpdatePatientRequest extends FormRequest
         return [
             'name' => ['required', 'string', 'max:255'],
             'address' => ['required'],
-            'phone' => ['required', 'regex:/^\d{10,12}$/', Rule::unique(Patient::class)->ignore($this->patient->id)],
+            'phone' => ['required', Rule::unique(Patient::class)->ignore($this->patient->id)],
             'hospital_id' => ['required'],
         ];
     }
