@@ -21,6 +21,6 @@ info:
   username : laravel
   password :12345
   
-  #pada bagian pasien saya menggunakan faker
+  # pada bagian pasien saya menggunakan faker
   dengan format number harus benar 10-12 angka
  ketika update dan faker terkadang suka random
